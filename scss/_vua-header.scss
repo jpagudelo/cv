@@ -1,0 +1,67 @@
+.vuaHeader {
+   position: absolute;
+   top: 30px;
+   left: 30px;
+   z-index: 9;
+   background-color: hsl(5, 49%, 20%);
+   border: 5px solid hsl(5, 49%, 10%);
+   border-radius: 30px;
+   display: inline-flex;
+   flex-wrap: wrap;
+   align-items: center;
+   box-shadow: 0 2px 4px hsla(0, 0%, 0%, .2);
+}
+
+.vuaHeader__logo {
+   width: 28%;
+   text-align: center;
+   padding: 10px;
+}
+
+.vuaHeader__logoImg {
+   width: 80px;
+   max-width: 100%;
+   border-radius: 50%;
+      
+   @media (max-width: 767px) {
+      width: 50px;
+   }
+}
+
+.vuaHeader__content {
+   width: 72%;
+   position: relative;
+   padding: 10px;
+}
+
+.vuaHeader__breadCrumbs {
+   padding: 0;
+   margin-bottom: 0;
+   color: #ffefcc;
+}
+
+.vuaHeader__breadCrumbs a {
+   color: #ffefcc;
+}
+
+.vuaHeader__close {
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   padding: 0;
+   width: 34px;
+   height: 34px;
+   padding-bottom: 2px;
+   border-radius: 50%;
+   background-color: #fff;
+   transition: transform .5s cubic-bezier(0.47, 2.02, 0.31, -0.36);
+
+   &:hover {
+      transform: translateY(-50%) scale(0.8);
+   }
+}
+
+.vuaHeader__closeIcon {
+   width: 46%;
+}

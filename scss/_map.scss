@@ -1,0 +1,312 @@
+/*------------------------------------
+   ?HOME
+------------------------------------*/
+.home {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+}
+
+.progressbar {
+   --animationDurationProgressbar: 1s;
+   max-width: 560px;
+   width: calc(50% - 70px);
+   margin-left: 35px;
+   position: absolute;
+   bottom: 30px;
+   left: 0;
+   padding-left: 10px;
+   padding-right: 10px;
+
+   @media (max-width: 767px) {
+      bottom: 100px;
+      width: calc(100% - 70px);
+   }
+}
+
+.progressbar__avatar {
+   display: block;
+   width: 62px;
+   height: 62px;
+   position: absolute;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   left: 0;
+   background-color: #4C1E1A;
+   border-radius: 50%;
+   border: 3px solid #fff;
+   box-shadow: 2px 2px 5px hsla(0, 0%, 0%, .5);
+   transition: left var(--animationDurationProgressbar);
+
+   background-image: url(../img/avatar.png);
+   background-size: 600%;
+   background-position: 0 center;
+
+   @media (max-width: 767px) {
+      width: 50px;
+      height: 50px;
+   }
+}
+
+.progressbar--1 .progressbar__avatar {
+   left: 0;
+   background-position: 0 center;
+}
+
+.progressbar--2 .progressbar__avatar {
+   left: 20%;
+   background-position: 20% center;
+}
+
+.progressbar--3 .progressbar__avatar {
+   left: 40%;
+   background-position: 40% center;
+}
+
+.progressbar--4 .progressbar__avatar {
+   left: 60%;
+   background-position: 60% center;
+}
+
+.progressbar--5 .progressbar__avatar {
+   left: 80%;
+   background-position: 80% center;
+}
+
+.progressbar--6 .progressbar__avatar {
+   left: 100%;
+   background-position: 100% center;
+}
+
+.progressbar__barContainer {
+   display: block;
+   width: 100%;
+   height: 20px;
+   border: 1px solid #F8395C;
+   background-color: #f5f7ff;
+   border-radius: 20px;
+   overflow: hidden;
+
+   @media (max-width: 767px) {
+      height: 15px;
+   }
+}
+
+.progressbar__bar {
+   display: block;
+   background-color: #F8395C;
+   height: 100%;
+   width: 0;
+   transition: width var(--animationDurationProgressbar);
+}
+
+.progressbar--1 .progressbar__bar {
+   width: 0;
+}
+
+.progressbar--2 .progressbar__bar {
+   width: 20%;
+}
+
+.progressbar--3 .progressbar__bar {
+   width: 40%;
+}
+
+.progressbar--4 .progressbar__bar {
+   width: 60%;
+}
+
+.progressbar--5 .progressbar__bar {
+   width: 80%;
+}
+
+.progressbar--6 .progressbar__bar {
+   width: 100%;
+}
+
+
+
+
+
+/*------------------------------------
+   ?MAPA
+------------------------------------*/
+.mapFrame {
+   position: relative;
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+   background-color: #4C1E1A;
+}
+
+.map {
+   position: absolute;
+   width: 70%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   transition: width .3s;
+
+   &:hover {
+      cursor: grab;
+   }
+}
+
+.map__img {
+   width: 100%;
+}
+
+
+
+
+
+
+/*------------------------------------
+   ?MUNDOS
+------------------------------------*/
+.world {
+   position: absolute;
+   width: 14%;
+   transition: transform .3s;
+
+   &:hover {
+      cursor: pointer;
+      transform: scale(1.3);
+   }
+}
+
+.world--1 {
+   top: 20%;
+   left: 15%;
+     width: 15%;
+}
+
+.world--2 {
+   top: 20%;
+  left: 67%;
+  width: 16%;
+}
+
+.world--3 {
+top: 57%;
+  left: 13%;
+}
+
+.world--4 {
+top: 38%;
+  left: 43%;
+}
+
+.world--5 {
+top: 58%;
+  left: 70%;
+}
+
+.world--active {
+   transform: scale(1.2);
+
+   &:hover {
+      transform: scale(1.4);
+   }
+}
+
+.world::after {
+   content: "";
+  position: absolute;
+  top: 63%;
+  left: 0;
+  width: 62%;
+  height: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.world.world--active::after {
+  background-image: url(../img/candado.png);
+}
+
+.world--1::after {
+   background-image: url(../img/cofre-1.png);
+}
+
+.world--2::after {
+   background-image: url(../img/cofre-2.png);
+}
+
+.world--3::after {
+   background-image: url(../img/cofre-3.png);
+}
+
+.world--4::after {
+   background-image: url(../img/cofre-4.png);
+}
+
+.world--5::after {
+   background-image: url(../img/cofre-5.png);
+}
+
+.world--unlocked {
+   animation: worldUnlocked 1.2s, worldActive 5s 1.2s backwards;
+   transform: scale(1.2);
+
+   &:hover {
+      animation-play-state: paused;
+      transform: scale(1.4);
+   }
+}
+
+.world--unlocked .world__locked {
+   animation: worldUnlocked__locked 1.5s;
+}
+
+.world__locked {
+   opacity: 0;
+   position: absolute;
+   width: 46%;
+   left: 52%;
+   top: 58%;
+}
+
+.world--locked .world__locked {
+   opacity: 1;
+}
+
+
+
+
+
+
+/*------------------------------------
+   ?ZOOM
+------------------------------------*/
+
+.zoom {
+   position: absolute;
+   top: 50%;
+   right: 0;
+   background-color: #260f0d;
+   transform: translateY(-50%);
+   padding: 8px;
+   border-radius: 24px 0 0 24px;
+   display: flex;
+   flex-direction: column;
+}
+
+.zoom__in,
+.zoom__out {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   background-color: #095d6d;
+}
+
+.zoom__in {
+   margin-bottom: 7px;
+}
+
+.zoom__icon {
+   width: 70%;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Juan Pablo Agudelo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/restyle.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <article id="tema05" class="tema backdrop tema-activo">
+
+        <section class="profile-container">
+            <img class="profile-img" src="img/mundo-5.png" alt="Habilidades">
+            <h1 class="profile-name">Competencias Clave</h1>
+            <div class="profile-section">
+                <div class="item">
+                    <h2>Estrategia y Diseño de Experiencias</h2>
+                    <ul>
+                        <li>Visión Estratégica y de Producto</li>
+                        <li>Diseño de Experiencias de Aprendizaje (LXD)</li>
+                        <li>Diseño de Interfaces (UI) y Experiencia de Usuario (UX)</li>
+                        <li>Arquitectura de la Información</li>
+                        <li>Gamificación e Storytelling Interactivo</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h2>Tecnologías y Software</h2>
+                    <ul>
+                        <li>
+                            <strong>Diseño:</strong>
+                            <ul>
+                                <li>Figma (Avanzado)</li>
+                                <li>Adobe Creative Suite (Básico)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Frontend:</strong>
+                            <ul>
+                                <li>HTML (Avanzado)</li>
+                                <li>CSS/SASS (Avanzado)</li>
+                                <li>JavaScript (Básico)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Plataformas CMS/LMS:</strong>
+                            <ul>
+                                <li>Moodle (Avanzado)</li>
+                                <li>WordPress (Intermedio)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h2>Metodologías</h2>
+                    <ul>
+                        <li>Design Thinking</li>
+                        <li>Agile</li>
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+            <div class="navegation">
+                <a class="cerrar btn" href="javascript:void(0)">Volver al mapa</a>
+            </div>
+        </section>
+
+    </article>
+
+
+    <script src="js/scripts.js"></script>
+    <script src="js/backdrop.min.js"></script>
+    <script>
+        // Select all elements with class "cerrar"
+        const elementClose = document.querySelectorAll(".cerrar");
+
+        // Add click event listener to each element
+        elementClose.forEach(element => {
+            element.addEventListener("click", closeWorld);
+        });
+
+        // Function to close the world
+        function closeWorld() {
+            const dataBackdrop = {
+                closeBackdrop: 'close'
+            };
+            window.parent.postMessage(dataBackdrop, '*');
+        }
+    </script>
+</body>
+
+</html>

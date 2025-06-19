@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Juan Pablo Agudelo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/restyle.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <article id="tema03" class="tema backdrop tema-activo">
+
+        <section class="profile-container">
+            <img class="profile-img" src="img/mundo-3.png" alt="Perfil">
+            <h1 class="profile-name">Experiencia laboral</h1>
+            <div class="profile-section">
+                <div class="job">
+                    <h2 class="mb-0">Escuela Didáctica | Pereira, Colombia</h2>
+                    <p class="date">(noviembre 2017 - Presente)</p>
+                    
+                    <h3 class="mb-0">Director de Innovación</h3>
+                    <p class="date mb-0">(junio 2025 - Presente)</p>
+                    <ul>
+                        <li>Promovido para liderar la visión estratégica y la hoja de ruta de innovación de los productos y servicios de la compañía, reportando directamente a la gerencia general.</li>
+                        <li>Responsable de identificar y capitalizar nuevas oportunidades de negocio y tecnologías emergentes para potenciar la oferta de valor en el sector EdTech.</li>
+                        <li>Dirijo un ciclo de innovación centrado en el usuario, desde la investigación y la ideación hasta la creación de prototipos.</li>
+                    </ul>
+
+                    <h3 class="mb-0">Diseñador de Productos / Diseñador UI/UX</h3>
+                    <p class="date mb-0">(noviembre 2017 - junio 2025)</p>
+                    <ul>
+                        <li><strong>Logro clave:</strong> Lideré el diseño de la experiencia de usuario (UX) y la interfaz (UI) de Coloso, un software modular (SaaS) concebido para optimizar y agilizar la administración del LMS Moodle.</li>
+                        <li><strong>Logro clave:</strong> Creé y desarrollé un tema semilla personalizable para Moodle, implementado en más de 20 universidades virtuales.</li>
+                        <li><strong>Logro clave:</strong> Diseñé un innovador formato de curso gamificado, utilizando storytelling y mapas interactivos.</li>
+                        <li>Realicé el ciclo completo de diseño y maquetación para soluciones de e-learning de clientes de alto perfil.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h2 class="mb-0">Consultoría y Desarrollo Freelance</h2>
+                    <h3 class="mb-0">Diseñador y Desarrollador Web</h3>
+                    <p class="date mb-0">(2017 - Presente)</p>
+                    <ul>
+                        <li>Diseño y desarrollo de sitios web y plataformas de e-commerce a medida.</li>
+                        <li>Clientes destacados: Flota Occidental, Kunek Coffee, Ruta 29 (versiones Colombia, Argentina y USA).</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h2 class="mb-0">ISM - Innova Social Marketing | Pereira, Colombia</h2>
+                    <p class="date mb-0">(abril 2016 - octubre 2017)</p>
+                    <h3>Desarrollador Web</h3>
+                    <ul>
+                        <li>Lideré el diseño y desarrollo en WordPress de sitios web para marcas como Termales Santa Rosa de Cabal.</li>
+                        <li>Incrementé la visibilidad online y la captación de clientes mediante estrategias SEO.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h2 class="mb-0">Telemark Spain | Pereira, Colombia</h2>
+                    <p class="date mb-0">(agosto 2012 - febrero 2016)</p>
+                    <h3>Diseñador gráfico</h3>
+                    <ul>
+                        <li>Diseño y maquetación de sitios web en los CMS Fatwire y WebsPlanet.</li>
+                        <li>Optimización SEO para los sitios web.</li>
+                    </ul>
+                </div>
+            </div></div></ul>
+
+            </div>
+            <div class="navegation">
+                <a class="cerrar btn" href="javascript:void(0)">Volver al mapa</a>
+            </div>
+        </section>
+
+    </article>
+
+
+    <script src="js/scripts.js"></script>
+    <script src="js/backdrop.min.js"></script>
+    <script>
+        // Select all elements with class "cerrar"
+        const elementClose = document.querySelectorAll(".cerrar");
+
+        // Add click event listener to each element
+        elementClose.forEach(element => {
+            element.addEventListener("click", closeWorld);
+        });
+
+        // Function to close the world
+        function closeWorld() {
+            const dataBackdrop = {
+                closeBackdrop: 'close'
+            };
+            window.parent.postMessage(dataBackdrop, '*');
+        }
+    </script>
+</body>
+
+</html>

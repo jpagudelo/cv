@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Juan Pablo Agudelo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/restyle.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <article id="tema04" class="tema backdrop tema-activo">
+
+        <section class="profile-container">
+            <img class="profile-img" src="img/mundo-4.png" alt="Estudios">
+            <h1 class="profile-name">Estudios</h1>
+            <div class="profile-section">
+                <div class="item">
+                    <h2>Educación y Formación</h2>
+                        <div class="pl-15">
+                            <div class="mb-20">
+                                <h3 class="mb-0">Maestría en Innovación y Tecnologías para la Educación</h3>
+                                Universidad El Bosque <span class="date">(febrero 2024 - diciembre 2025, esperado)</span>
+                            </div>
+                            <div class="mb-20">
+                                <h3 class="mb-0">Licenciatura en Comunicación e Informática Educativa</h3>
+                                Universidad Tecnológica de Pereira <span class="date">(2007 - 2015)</span>
+                            </div>
+                        </div>
+                </div>
+                <div class="item">
+                    <h2>Certificaciones Relevantes</h2>
+                    <ul class="certifications-list">
+                        <li>
+                            <strong>Propiedad Intelectual en Proyectos de Investigación, Desarrollo tecnológico e Innovación (I+D+i)</strong> | Universidad El Bosque (2024)
+                        </li>
+                        <li>
+                            <strong>Gestión del conocimiento organizacional</strong> | Universidad Pontificia Bolivariana (2023)
+                        </li>
+                        <li>
+                            <strong>Curso de Lean UX</strong> | Platzi (2022)
+                        </li>
+                        <li>
+                            <strong>Curso de Design Thinking con Minds Garage</strong> | Platzi (2022)
+                        </li>
+                        <li>
+                            <strong>Gráficos vectoriales SVG: ilustrar y animar con código, Desarrollo de páginas web, contenido digital/multimedia y recursos informáticos</strong> | Doméstika (2017)
+                        </li>
+                        <li>
+                            <strong>Curso de HTML5 y CSS3, Desarrollo de páginas web, contenido digital/multimedia y recursos informáticos</strong> | Universidad Tecnológica de Pereira (2016)
+                        </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h2>Formación continua e intereses</h2>
+                    <ul class="interests-list">
+                        <li>
+                            <strong>Inteligencia Artificial:</strong> Estudio activo del funcionamiento, aplicación y actualidad de la IA, con una dedicación semanal de más de 4 horas.
+                        </li>
+                        <li>
+                            <strong>Liderazgo y diseño:</strong> Desarrollo continuo en áreas de Liderazgo, Experiencia de Usuario (UX) y Diseño de Interfaces (UI) a través de literatura especializada y análisis de tendencias del sector.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+            <div class="navegation">
+                <a class="cerrar btn" href="javascript:void(0)">Volver al mapa</a>
+            </div>
+        </section>
+
+    </article>
+
+
+    <script src="js/scripts.js"></script>
+    <script src="js/backdrop.min.js"></script>
+    <script>
+        // Select all elements with class "cerrar"
+        const elementClose = document.querySelectorAll(".cerrar");
+
+        // Add click event listener to each element
+        elementClose.forEach(element => {
+            element.addEventListener("click", closeWorld);
+        });
+
+        // Function to close the world
+        function closeWorld() {
+            const dataBackdrop = {
+                closeBackdrop: 'close'
+            };
+            window.parent.postMessage(dataBackdrop, '*');
+        }
+    </script>
+</body>
+
+</html>

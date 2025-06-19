@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Juan Pablo Agudelo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/restyle.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <article id="tema01" class="tema backdrop tema-activo">
+
+        <section class="profile-container">
+            <img class="profile-img" src="img/mundo-1.png" alt="Perfil">
+            <h1 class="profile-name">Juan Pablo Agudelo Muriel</h1>
+            <p class="profile-title">Director de Innovación | Diseñador de Experiencias de Aprendizaje (LXD)</p>
+            <div class="profile-section">
+                <h3 class="section-title">Perfil Profesional</h3>
+                <p class="profile-description">
+                    Director de Innovación y estratega de producto educativo con más de 11 años de experiencia
+                    tendiendo puentes entre el diseño de experiencias de usuario (UX), la tecnología y los objetivos de
+                    negocio.
+                </p>
+                </p>
+                    Apasionado por la empatía como motor de innovación para crear soluciones de e-learning
+                    intuitivas, atractivas y eficaces. Experto en transformar necesidades complejas en productos escalables, con
+                    un fuerte interés en aplicar tecnologías emergentes como la Inteligencia Artificial para potenciar
+                    la educación.
+                </p>
+            </div>
+            <div class="navegation">
+                <a class="cerrar btn" href="javascript:void(0)">Volver al mapa</a>
+            </div>
+        </section>
+
+    </article>
+
+
+    <script src="js/scripts.js"></script>
+    <script src="js/backdrop.min.js"></script>
+    <script>
+        // Select all elements with class "cerrar"
+        const elementClose = document.querySelectorAll(".cerrar");
+
+        // Add click event listener to each element
+        elementClose.forEach(element => {
+            element.addEventListener("click", closeWorld);
+        });
+
+        // Function to close the world
+        function closeWorld() {
+            const dataBackdrop = {
+                closeBackdrop: 'close'
+            };
+            window.parent.postMessage(dataBackdrop, '*');
+        }
+    </script>
+</body>
+
+</html>

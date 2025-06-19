@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Juan Pablo Agudelo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/restyle.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <article id="tema02" class="tema backdrop tema-activo">
+
+        <section class="profile-container">
+            <img class="profile-img" src="img/mundo-2.png" alt="Proyectos">
+            <h1 class="profile-name">Proyectos Destacados</h1>
+            <div class="item">
+                <h3>Caja de Herramientas</h3>
+                <p>
+                    Diseñé la experiencia de usuario (UX) y la interfaz (UI), además de realizar
+                    el desarrollo frontend, para esta plataforma de recursos clave. Esta herramienta facilita la
+                    implementación de la “Estrategia pedagógica con énfasis en talento digital para educación media”.
+                </p>
+                <p>
+                    <a class="link-p" href="https://caja-herramientas.labtica.com/" target="_blank" rel="noopener noreferrer">Visitar
+                        el proyecto 🔗</a>
+                </p>
+            </div>
+            <div class="item">
+                <h3>MCTL (Mujeres con todas las letras)</h3>
+                <p>
+                    Realicé el diseño UI/UX y la maquetación frontend (HTML y CSS) de este curso interactivo que narra la historia de 12 mujeres relevantes de Latinoamérica.
+                </p>
+                <p>
+                    <i>Puedes registrarte para navegar por la experiencia.</i>
+                </p>
+                <p>
+                    <a class="link-p" href="https://mctl.escueladidactica.com/" target="_blank" rel="noopener noreferrer">Visitar
+                        el proyecto 🔗</a>
+                </p>
+            </div>
+            <div class="navegation">
+                <a class="cerrar btn" href="javascript:void(0)">Volver al mapa</a>
+            </div>
+        </section>
+
+    </article>
+
+
+    <script src="js/scripts.js"></script>
+    <script src="js/backdrop.min.js"></script>
+    <script>
+        // Select all elements with class "cerrar"
+        const elementClose = document.querySelectorAll(".cerrar");
+
+        // Add click event listener to each element
+        elementClose.forEach(element => {
+            element.addEventListener("click", closeWorld);
+        });
+
+        // Function to close the world
+        function closeWorld() {
+            const dataBackdrop = {
+                closeBackdrop: 'close'
+            };
+            window.parent.postMessage(dataBackdrop, '*');
+        }
+    </script>
+</body>
+
+</html>

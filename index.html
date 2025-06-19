@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Juan Pablo Agudelo</title>
+   <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+   <div id="home" class="home">
+
+   <header class="vuaHeader">
+      <div class="vuaHeader__logo">
+         <img class="vuaHeader__logoImg" src="img/Juan-Pablo-Agudelo.jpg" alt="Juan Pablo Agudelo">
+      </div>
+      <div class="vuaHeader__content">
+         <p class="vuaHeader__breadCrumbs">Juan Pablo Agudelo</p>
+         <p class="vuaHeader__breadCrumbs"><a href="mailto:jpamuriel@gmail.com">jpamuriel@gmail.com</a></p>
+         <p class="vuaHeader__breadCrumbs"><a href="https://www.linkedin.com/in/juanpabloagudelomuriel/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      </div>
+   </header>
+
+      <section id="mapFrame" class="mapFrame">
+         <div id="map" class="map">
+            <img class="map__img" src="img/map.png" alt="Mapa">
+
+            <!-- Mundos -->
+            <div id="world--1" class="world world--1 world--active" data-world="1"
+               data-href="worlds/mundo-1/index.html" data-openin="_backdrop">
+               <img class="world__img" src="img/mundo-1.png" alt="Mundo 1">
+            </div>
+            <div id="world--2" class="world world--2 world--active" data-world="2"
+               data-href="worlds/mundo-2/index.html" data-openin="_backdrop">
+               <img class="world__img" src="img/mundo-2.png" alt="Mundo 2">
+            </div>
+            <div id="world--3" class="world world--3 world--active" data-world="3"
+               data-href="worlds/mundo-3/index.html" data-openin="_backdrop">
+               <img class="world__img" src="img/mundo-3.png" alt="Mundo 3">
+            </div>
+            <div id="world--4" class="world world--4 world--active" data-world="4"
+               data-href="worlds/mundo-4/index.html" data-openin="_backdrop">
+               <img class="world__img" src="img/mundo-4.png" alt="Mundo 4">
+            </div>
+            <div id="world--5" class="world world--5 world--active" data-world="5"
+               data-href="worlds/mundo-5/index.html" data-openin="_backdrop">
+               <img class="world__img" src="img/mundo-5.png" alt="Mundo 5">
+            </div>
+            <!-- Fin Mundos -->
+
+         </div>
+      </section>
+
+      <section class="zoom">
+         <button id="zoom__in" class="zoom__in">
+            <img class="zoom__icon" src="img/search-plus-solid.svg" alt="Zoom in">
+         </button>
+         <button id="zoom__out" class="zoom__out">
+            <img class="zoom__icon" src="img/search-minus-solid.svg" alt="Zoom out">
+         </button>
+      </section>
+
+   </div>
+
+
+   <article class="backdrop">
+
+      <iframe id="backdrop__iframe" class="backdrop__iframe" src="" frameborder="0"></iframe>
+
+      <section class="backdrop__preload">
+         <svg class="backdrop__preloadIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+               d="M256 489.5c-62.4 0-121-24.3-165.1-68.4S22.5 318.4 22.5 256c0-52.2 16.8-101.5 48.7-142.7C102 73.4 145.6 44.1 194 30.8c9.3-2.6 19 2.9 21.5 12.2 2.6 9.3-2.9 19-12.2 21.5C117.4 88.2 57.5 166.9 57.5 256c0 109.5 89 198.5 198.5 198.5s198.5-89 198.5-198.5c0-91.5-61.9-170.7-150.5-192.7-9.4-2.3-15.1-11.8-12.8-21.2 2.3-9.4 11.8-15.1 21.2-12.8 49.7 12.3 94.7 41.3 126.7 81.7 33 41.6 50.4 91.7 50.4 144.9 0 62.4-24.3 121-68.4 165.1-44.1 44.2-102.7 68.5-165.1 68.5z" />
+         </svg>
+      </section>
+   </article>
+
+   <!-- SPLASH INICIO -->
+   <article class="splash" id="splashInicio">
+      <div class="splash__content">
+         <img class="splashInicio__img" src="img/Juan-Pablo-Agudelo.jpg" alt="Juan Pablo Agudelo">
+         <p class="splash__texto">
+            Hola, soy <b>Juan Pablo Agudelo</b> y te doy la bienvenida a mi curriculum vitae interactivo.
+         </p>
+         <p class="splash__texto mb--20">
+            Da clic en las islas para conocer más sobre mí y mis habilidades.
+         </p>
+         <button id="btnCloseSplashInicio" class="splash__btnCerrar splashInicio__btnCerrar">Comenzar</button>
+      </div>
+   </article>
+   <!-- FIN SPLASH INICIO -->
+
+   <!-- SPLASH FINAL -->
+   <div id="splashFinal" class="splash dNone">
+      <div class="splash__content">
+         <div class="splash__poderes">
+            <img src="img/splash-poder1.png" alt="">
+            <img src="img/splash-poder2.png" alt="">
+            <img src="img/splash-poder3.png" alt="">
+            <img src="img/splash-poder4.png" alt="">
+         </div>
+         <p class="splash__texto">
+            Has recorrido exitosamente los mundos y ya cuentas con los <b>4 Súper Poderes</b> que te permitirán
+            brindar un <b>Servicio de Corazón</b>.
+         </p>
+         <p class="splash__texto">
+            Te invitamos a <b>descargar</b> tu insignia y <b>compartirla</b> en tu foto de perfil para recordar
+            siempre tus... <span class="splash__h3">¡Súper Poderes!</span>
+         </p>
+         <div class="splash__insignia">
+            <a href="img/super-servidor-de-corazon.png" class="splash__descargar" id="descargar"
+               download="super-servidor-de-corazon.png"><img src="img/super-servidor-de-corazon.png" alt=""></a>
+            <a href="img/super-servidora-de-corazon.png" class="splash__descargar" id="descargar"
+               download="super-servidor-de-corazon.png"><img src="img/super-servidora-de-corazon.png" alt=""></a>
+         </div>
+
+         <div class="splash__botones">
+            <!-- <a href="img/super-servidor-de-corazon.png" class="splash__btnDescargar" id="descargar"
+               download="super-servidor-de-corazon.png">Descargar</a> -->
+            <button id="btnCloseSplashFinal" class="splash__btnCerrar splashInicio__btnCerrar">Cerrar</button>
+         </div>
+      </div>
+   </div>
+   <!-- FIN SPLASH FINAL -->
+
+   <script src="js/mapa.js"></script>
+</body>
+
+</html>
